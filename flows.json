@@ -1,0 +1,557 @@
+[
+    {
+        "id": "3f17c5b72cdd82b8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7a9e47f110d25cc5",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "COM5",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "ee27576f33220a10",
+        "type": "serial-port",
+        "name": "arduinoUno",
+        "serialport": "COM5",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "f567703f736726f6",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1a7ccd9e149dcb3e",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "157778db520c1f1f",
+        "type": "ui_group",
+        "name": "Temperatura",
+        "tab": "f567703f736726f6",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "85a93061bbac034e",
+        "type": "ui_group",
+        "name": "Distância",
+        "tab": "f567703f736726f6",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "15e9638b66a79c2d",
+        "type": "ui_group",
+        "name": "Umidade",
+        "tab": "f567703f736726f6",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0a75f9c7bf3609f5",
+        "type": "ui_group",
+        "name": "Servo",
+        "tab": "f567703f736726f6",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "825a02520d4a0bb1",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt-dashboard.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d8d755b03ac233ca",
+        "type": "json",
+        "z": "3f17c5b72cdd82b8",
+        "name": "test",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 190,
+        "y": 220,
+        "wires": [
+            [
+                "b759fdf0233c8e99",
+                "82acd8f302fb5b40",
+                "9efcbf096ce27799",
+                "3962a74e5cc81a87"
+            ]
+        ]
+    },
+    {
+        "id": "b759fdf0233c8e99",
+        "type": "change",
+        "z": "3f17c5b72cdd82b8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.Temperatura",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 180,
+        "wires": [
+            [
+                "6888722835992f76",
+                "f31233e31a6c99a5"
+            ]
+        ]
+    },
+    {
+        "id": "6888722835992f76",
+        "type": "ui_gauge",
+        "z": "3f17c5b72cdd82b8",
+        "name": "",
+        "group": "157778db520c1f1f",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "temp",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 630,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "82acd8f302fb5b40",
+        "type": "change",
+        "z": "3f17c5b72cdd82b8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.Umidade",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 220,
+        "wires": [
+            [
+                "d9be46b4086a4730",
+                "b585c7a02c2b040e"
+            ]
+        ]
+    },
+    {
+        "id": "9efcbf096ce27799",
+        "type": "change",
+        "z": "3f17c5b72cdd82b8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.DistanciaAtual",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 260,
+        "wires": [
+            [
+                "5bbaea1510ba58d5",
+                "e3a186d0db015a38"
+            ]
+        ]
+    },
+    {
+        "id": "d9be46b4086a4730",
+        "type": "ui_gauge",
+        "z": "3f17c5b72cdd82b8",
+        "name": "",
+        "group": "15e9638b66a79c2d",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "umidade",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 640,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "5bbaea1510ba58d5",
+        "type": "ui_gauge",
+        "z": "3f17c5b72cdd82b8",
+        "name": "",
+        "group": "85a93061bbac034e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Distância",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "-300",
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 640,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "de403fa26429b56b",
+        "type": "debug",
+        "z": "3f17c5b72cdd82b8",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "de675601c56bfe81",
+        "type": "serial in",
+        "z": "3f17c5b72cdd82b8",
+        "name": "ArduinoUno",
+        "serial": "ee27576f33220a10",
+        "x": 130,
+        "y": 300,
+        "wires": [
+            [
+                "d8d755b03ac233ca"
+            ]
+        ]
+    },
+    {
+        "id": "3962a74e5cc81a87",
+        "type": "mqtt out",
+        "z": "3f17c5b72cdd82b8",
+        "name": "",
+        "topic": "fiap/iot/1esps/JuniorCaio/sensor",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "825a02520d4a0bb1",
+        "x": 610,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e3a186d0db015a38",
+        "type": "function",
+        "z": "3f17c5b72cdd82b8",
+        "name": "function 1",
+        "func": "msg.headers = {\n    'Device-Token':'',\n    'Content-Type':'application/json'\n};\n\nvar action = [\n    {\n        'variable':'Distancia',\n        'unit':'cm',\n        'value':msg.payload,\n    }\n]\n\nmsg.payload = action\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 260,
+        "wires": [
+            [
+                "954a593f8796218f"
+            ]
+        ]
+    },
+    {
+        "id": "954a593f8796218f",
+        "type": "http request",
+        "z": "3f17c5b72cdd82b8",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.tago.io/data",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "Authorization",
+                "valueType": "other",
+                "valueValue": "066a5025-b5e4-4d37-b2d1-c78310f30cac"
+            }
+        ],
+        "x": 990,
+        "y": 200,
+        "wires": [
+            [
+                "de403fa26429b56b"
+            ]
+        ]
+    },
+    {
+        "id": "b585c7a02c2b040e",
+        "type": "function",
+        "z": "3f17c5b72cdd82b8",
+        "name": "function 2",
+        "func": "msg.headers = {\n    'Device-Token':'',\n    'Content-Type':'application/json'\n};\n\nvar action = [\n    {\n        'variable':'Umidade',\n        'unit':'%',\n        'value':msg.payload,\n    }\n]\n\nmsg.payload = action\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 200,
+        "wires": [
+            [
+                "954a593f8796218f"
+            ]
+        ]
+    },
+    {
+        "id": "f31233e31a6c99a5",
+        "type": "function",
+        "z": "3f17c5b72cdd82b8",
+        "name": "function 3",
+        "func": "msg.headers = {\n    'Device-Token':'',\n    'Content-Type':'application/json'\n};\n\nvar action = [\n    {\n        'variable':'Temperatura',\n        'unit':'%',\n        'value':msg.payload,\n    }\n]\n\nmsg.payload = action\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 160,
+        "wires": [
+            [
+                "954a593f8796218f"
+            ]
+        ]
+    }
+]
